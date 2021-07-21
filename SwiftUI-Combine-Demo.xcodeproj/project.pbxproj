@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A709BD3626A833460054A7DA /* PlaceHolderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A709BD3526A833460054A7DA /* PlaceHolderImageView.swift */; };
 		A75FE47B26A40767002AC5C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75FE47A26A40767002AC5C2 /* AppDelegate.swift */; };
 		A75FE47D26A40767002AC5C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75FE47C26A40767002AC5C2 /* SceneDelegate.swift */; };
 		A75FE48126A40776002AC5C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A75FE48026A40776002AC5C2 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A709BD3526A833460054A7DA /* PlaceHolderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderImageView.swift; sourceTree = "<group>"; };
 		A75FE47726A40767002AC5C2 /* SwiftUI-Combine-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Combine-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75FE47A26A40767002AC5C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A75FE47C26A40767002AC5C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				A75FE48F26A41259002AC5C2 /* HomeView.swift */,
 				A75FE4AB26A53E57002AC5C2 /* ArticleView.swift */,
 				A75FE4AD26A5AC18002AC5C2 /* ErrorView.swift */,
+				A709BD3526A833460054A7DA /* PlaceHolderImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			files = (
 				A75FE47B26A40767002AC5C2 /* AppDelegate.swift in Sources */,
 				A75FE4A526A5354D002AC5C2 /* NewsViewModel.swift in Sources */,
+				A709BD3626A833460054A7DA /* PlaceHolderImageView.swift in Sources */,
 				A75FE49626A427D3002AC5C2 /* NewsEndpoint.swift in Sources */,
 				A75FE49326A425EB002AC5C2 /* NewsResponse.swift in Sources */,
 				A75FE49D26A4314C002AC5C2 /* NewsService.swift in Sources */,

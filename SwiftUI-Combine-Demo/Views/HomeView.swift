@@ -24,12 +24,12 @@ struct HomeView: View {
                     List(articles){ article in
                         ArticleView(article: article)
                             .onTapGesture {loadWebPage(url: article.url)
-                            }
+                        }
                     }
                     .navigationTitle(Text("News"))
                 }
-            }
-        }.onAppear(perform: newsViewModel.getArticles)
+             }
+          }.onAppear(perform: newsViewModel.getArticles)
     }
     
     func loadWebPage(url: String?){

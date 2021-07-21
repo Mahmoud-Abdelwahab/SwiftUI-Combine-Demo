@@ -10,7 +10,6 @@ import Combine
 import URLImage
 struct ArticleView: View {
     var article: Article
-    
     var body: some View{
         HStack{
             if let imageURL = article.urlToImage,
