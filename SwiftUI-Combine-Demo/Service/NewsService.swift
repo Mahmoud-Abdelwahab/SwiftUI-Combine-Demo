@@ -9,12 +9,12 @@ import Foundation
 import Combine
 
 protocol NewsService {
-    func getNews()-> AnyPublisher<NewsResponse,APIError>
+    func getNews(for endPoint: NewsAPI)->AnyPublisher<NewsResponse,APIError>
 }
 
-extension NewsService{
+struct NewsServiceImp: NewsService{
     
-    func getNewsArticles(for endPoint: NewsAPI)->AnyPublisher<NewsResponse,APIError>{
+    func getNews(for endPoint: NewsAPI)->AnyPublisher<NewsResponse,APIError>{
         return URLSession.shared.dataTaskPublisher(for: endPoint.urlRequest)
             .receive(on: RunLoop.main)
             .mapError{_ in APIError.unKnown}

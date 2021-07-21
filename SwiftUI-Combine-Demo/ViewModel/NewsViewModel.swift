@@ -30,10 +30,9 @@ class NewsViewModel:ObservableObject,  NewsViewModelProtocol {
         
         self.state = .loading
         
-        let cancelable = newsService.getNewsArticles(for: .getNews)
+        let cancelable = newsService.getNews(for: .getNews)
             .sink { res in
                 switch res{
-                
                 case .finished:
                     // send articals back
                     self.state = .Success(self.articles)

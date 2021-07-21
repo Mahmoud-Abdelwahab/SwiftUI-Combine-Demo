@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,10 @@
 		A75FE49D26A4314C002AC5C2 /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75FE49C26A4314C002AC5C2 /* NewsService.swift */; };
 		A75FE4A226A53442002AC5C2 /* ResultState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75FE4A126A53442002AC5C2 /* ResultState.swift */; };
 		A75FE4A526A5354D002AC5C2 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75FE4A426A5354D002AC5C2 /* NewsViewModel.swift */; };
+		A75FE4A826A53C6E002AC5C2 /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = A75FE4A726A53C6E002AC5C2 /* URLImageStore */; };
+		A75FE4AA26A53C6E002AC5C2 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = A75FE4A926A53C6E002AC5C2 /* URLImage */; };
+		A75FE4AC26A53E57002AC5C2 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75FE4AB26A53E57002AC5C2 /* ArticleView.swift */; };
+		A75FE4AE26A5AC18002AC5C2 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75FE4AD26A5AC18002AC5C2 /* ErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,8 @@
 		A75FE49C26A4314C002AC5C2 /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
 		A75FE4A126A53442002AC5C2 /* ResultState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultState.swift; sourceTree = "<group>"; };
 		A75FE4A426A5354D002AC5C2 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		A75FE4AB26A53E57002AC5C2 /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
+		A75FE4AD26A5AC18002AC5C2 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A75FE4AA26A53C6E002AC5C2 /* URLImage in Frameworks */,
+				A75FE4A826A53C6E002AC5C2 /* URLImageStore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				A75FE48F26A41259002AC5C2 /* HomeView.swift */,
+				A75FE4AB26A53E57002AC5C2 /* ArticleView.swift */,
+				A75FE4AD26A5AC18002AC5C2 /* ErrorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +183,10 @@
 			dependencies = (
 			);
 			name = "SwiftUI-Combine-Demo";
+			packageProductDependencies = (
+				A75FE4A726A53C6E002AC5C2 /* URLImageStore */,
+				A75FE4A926A53C6E002AC5C2 /* URLImage */,
+			);
 			productName = "SwiftUI-Combine-Demo";
 			productReference = A75FE47726A40767002AC5C2 /* SwiftUI-Combine-Demo.app */;
 			productType = "com.apple.product-type.application";
@@ -200,6 +214,9 @@
 				Base,
 			);
 			mainGroup = A75FE46E26A40767002AC5C2;
+			packageReferences = (
+				A75FE4A626A53C6E002AC5C2 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = A75FE47826A40767002AC5C2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,8 +251,10 @@
 				A75FE49D26A4314C002AC5C2 /* NewsService.swift in Sources */,
 				A75FE4A226A53442002AC5C2 /* ResultState.swift in Sources */,
 				A75FE49026A4125A002AC5C2 /* HomeView.swift in Sources */,
+				A75FE4AC26A53E57002AC5C2 /* ArticleView.swift in Sources */,
 				A75FE47D26A40767002AC5C2 /* SceneDelegate.swift in Sources */,
 				A75FE49A26A42A82002AC5C2 /* APIError.swift in Sources */,
+				A75FE4AE26A5AC18002AC5C2 /* ErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +450,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A75FE4A626A53C6E002AC5C2 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A75FE4A726A53C6E002AC5C2 /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A75FE4A626A53C6E002AC5C2 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
+		};
+		A75FE4A926A53C6E002AC5C2 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A75FE4A626A53C6E002AC5C2 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A75FE46F26A40767002AC5C2 /* Project object */;
 }

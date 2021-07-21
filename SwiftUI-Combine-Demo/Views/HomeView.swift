@@ -8,8 +8,25 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @StateObject var newsViewModel = NewsViewModel(service: NewsServiceImp())
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Group{
+            switch newsViewModel.state{
+            case .loading:
+                ProgressView()
+            case .Failed(let error):
+                ErrorView(error: error, handel: newsViewModel.getArticles)
+            case .Success(let articles):
+                NavigationView {
+                    List(articles){
+                        ArticleView(article: $0)
+                    }
+                    .navigationTitle(Text("News"))
+                }
+            }
+        }.onAppear(perform: newsViewModel.getArticles)
     }
 }
 
