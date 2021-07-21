@@ -13,14 +13,15 @@ struct ArticleView: View {
     
     var body: some View{
         HStack{
-            if let imageURL = article.image,
+            if let imageURL = article.urlToImage,
                let url = URL(string: imageURL){
                 URLImage(url) {
                     // This view is displayed before download starts
                     EmptyView()
                 } inProgress: { progress in
                     // Display progress
-                    Text("Loading...")
+                    ProgressView()
+                    //Text("Loading...")
                 } failure: { error, retry in
                     // Display error and retry button
                     VStack {
