@@ -35,10 +35,10 @@ struct ArticleView: View {
                 }
                 .frame(width: 100, height: 100)
                 .cornerRadius(10)
-
+                
                 
             }else{
-              // when fail to find image url show placholder image
+                // when fail to find image url show placholder image
                 PlaceHolderImageView()
             }
             // Title and description text

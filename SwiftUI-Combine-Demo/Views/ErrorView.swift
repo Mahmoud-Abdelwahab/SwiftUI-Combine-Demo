@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ErrorView: View {
-
+    
     typealias ErrorViewAtionHandler = ()-> Void
     let error: Error
     let handel: ErrorViewAtionHandler
@@ -21,9 +21,9 @@ struct ErrorView: View {
     
     var body: some View {
         VStack {
-           Image(systemName: "exclamationmark.icloud")
-            .foregroundColor(.gray)
-            .font(.system(size: 50, weight: .heavy))
+            Image(systemName: "exclamationmark.icloud")
+                .foregroundColor(.gray)
+                .font(.system(size: 50, weight: .heavy))
             
             Text("Oooops")
                 .foregroundColor(.black)
@@ -34,8 +34,10 @@ struct ErrorView: View {
                 .font(.system(size: 15))
                 .multilineTextAlignment(.center)
                 .padding(4)
-
-            Button(action: {}, label: {
+            
+            Button(action: {
+                handel()
+            }, label: {
                 Text("Retry")
             })
             .frame(width: 50, height: 20)
@@ -44,7 +46,7 @@ struct ErrorView: View {
             .foregroundColor(.white)
             .font(.system(size: 20))
             .cornerRadius(10)
-          
+            
         }
     }
 }

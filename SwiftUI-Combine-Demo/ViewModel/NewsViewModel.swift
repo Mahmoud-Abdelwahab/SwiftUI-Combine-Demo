@@ -45,6 +45,6 @@ class NewsViewModel:ObservableObject,  NewsViewModelProtocol {
             }
         
         self.anyCancellable.insert(cancelable)
-
+        
     }
 }

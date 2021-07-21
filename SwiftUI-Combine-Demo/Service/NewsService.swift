@@ -33,7 +33,7 @@ struct NewsServiceImp: NewsService{
                         .decode(type: NewsResponse.self, decoder: jsonDecoder)
                         .mapError{ _ in APIError.decodingError}
                         .eraseToAnyPublisher()
-                         
+                    
                 }else{
                     //Error
                     return Fail(error: APIError.statusCode(response.statusCode)).eraseToAnyPublisher()

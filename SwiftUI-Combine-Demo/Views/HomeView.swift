@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @Environment(\.openURL) var openURL
     @StateObject var newsViewModel = NewsViewModel(service: NewsServiceImp())
     
     var body: some View {
@@ -20,13 +21,20 @@ struct HomeView: View {
                 ErrorView(error: error, handel: newsViewModel.getArticles)
             case .Success(let articles):
                 NavigationView {
-                    List(articles){
-                        ArticleView(article: $0)
+                    List(articles){ article in
+                        ArticleView(article: article)
+                            .onTapGesture {loadWebPage(url: article.url)
+                            }
                     }
                     .navigationTitle(Text("News"))
                 }
             }
         }.onAppear(perform: newsViewModel.getArticles)
+    }
+    
+    func loadWebPage(url: String?){
+        guard let url = url,let websiteURL = URL(string: url) else {return}
+        openURL(websiteURL)
     }
 }
 
