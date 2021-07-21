@@ -35,7 +35,7 @@ extension NewsAPI: APIBuilder{
         case .getNews:
             var component = URLComponents(string: "https://newsapi.org/v2")!
             component.queryItems = [
-                URLQueryItem(name: "country", value: "eg"),
+                URLQueryItem(name: "country", value: "us"),
                 URLQueryItem(name: "category", value: "business"),
                 URLQueryItem(name: "apiKey", value: "5614c04cf9914455b96ff3cfb714a6a4")
             ]
